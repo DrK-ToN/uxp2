@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OfficeSupply Online - Loja de Materiais para Escritório</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Estilos específicos da página inicial */
+        .product-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px;
+            text-align: center;
+            max-width: 300px;
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-card img {
+            max-width: 100%;
+            height: 200px;
+            object-fit: contain;
+        }
+
+        .cta-button {
+            background-color: #0056b3;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 15px;
+        }
+
+        .cta-button:hover {
+            background-color: #004494;
+        }
+
+        .products-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        header {
+            background-color: #0056b3;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>OfficeSupply Online</h1>
+        <p>Sua loja de materiais de escritório de alta qualidade</p>
+    </header>
+
+    <main class="container">
+        <h2 style="text-align: center;">Nossos Produtos em Destaque</h2>
+
+        <div class="products-container">
+            <!-- Produto 1 - Kit Escritório -->
+            <div class="product-card">
+                <img src="images/kit-escritorio.jpg" alt="Kit Escritório Premium">
+                <h3>Kit Escritório Premium</h3>
+                <p>Tudo que você precisa para seu dia a dia no escritório</p>
+                <a href="product-redirect.html" class="cta-button">Ver Detalhes</a>
+            </div>
+
+            <!-- Produto 2 - Mouse Ergonômico -->
+            <div class="product-card">
+                <img src="images/mouse-ergonomico.jpg" alt="Mouse Ergonômico">
+                <h3>Mouse Ergonômico</h3>
+                <p>Conforto e precisão para longas horas de trabalho</p>
+                <a href="#" class="cta-button">Ver Detalhes</a>
+            </div>
+
+            <!-- Produto 3 - Organizador de Mesa -->
+            <div class="product-card">
+                <img src="images/organizador-mesa.jpg" alt="Organizador de Mesa">
+                <h3>Organizador de Mesa</h3>
+                <p>Mantenha seu workspace organizado e eficiente</p>
+                <a href="#" class="cta-button">Ver Detalhes</a>
+            </div>
+        </div>
+        <button onclick="localStorage.removeItem('abTestVariant'); location.reload();">
+            Resetar Variante A/B
+        </button>
+    </main>
+
+    <footer style="background-color: #333; color: white; text-align: center; padding: 20px; margin-top: 30px;">
+        <p>OfficeSupply Online &copy; 2023 - Todos os direitos reservados</p>
+    </footer>
+
+    <!-- Google Analytics (opcional) -->
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-XXXXX-Y');
+    </script>
+</body>
+
+</html>
