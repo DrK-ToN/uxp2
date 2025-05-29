@@ -86,8 +86,10 @@ header nav ul li a {
 }
 
 .product-title {
-    font-size: 1.8em;
+    font-size: 2.2em;
+    color: #0056b3;
     margin-top: 0;
+    margin-bottom: 10px;
 }
 
 .product-category {
