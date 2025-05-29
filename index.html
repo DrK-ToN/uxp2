@@ -78,7 +78,7 @@
                 <img src="images/kit-escritorio.jpg" alt="Kit Escritório Premium">
                 <h3>Kit Escritório Premium</h3>
                 <p>Tudo que você precisa para seu dia a dia no escritório</p>
-                <a href="product-redirect.html" class="cta-button">Ver Detalhes</a>
+                <a href="#" class="cta-button" onclick="resetVariantAndRedirect()">Ver Detalhes</a>
             </div>
 
             <!-- Produto 2 - Mouse Ergonômico -->
@@ -97,9 +97,7 @@
                 <a href="#" class="cta-button">Ver Detalhes</a>
             </div>
         </div>
-        <button onclick="localStorage.removeItem('abTestVariant'); location.reload();">
-            Resetar Variante A/B
-        </button>
+
     </main>
 
     <footer style="background-color: #333; color: white; text-align: center; padding: 20px; margin-top: 30px;">
@@ -112,6 +110,11 @@
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
         gtag('config', 'UA-XXXXX-Y');
+
+        function resetVariantAndRedirect() {
+            localStorage.removeItem('abTestVariant');
+            window.location.href = 'product-redirect.html';
+        }
     </script>
 </body>
 
